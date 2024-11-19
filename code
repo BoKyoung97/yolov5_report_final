@@ -1,15 +1,1 @@
-# prompt: 구글 드라이브랑 연결
 
-from google.colab import drive
-drive.mount('/content/drive')
-
-### 이미지 파일 관리
-
-1. 먼저, YOLOv5 모델 학습을 위한 데이터 폴더 구조를 생성한다.
-
-```
-!mkdir -p Train/labels
-!mkdir -p Train/images
-!mkdir -p Val/labels
-!mkdir -p Val/images
-```
