@@ -99,7 +99,7 @@ DarkLabel에서 Open Image Folder를 통해 images 폴더를 선택하여 변환
 
 구글 드라이브에 학습 데이터셋과 관련 파일들을 업로드하였습니다. 
 
-[[DropShield 프로젝트 데이터셋](https://drive.google.com/drive/folders/1Bk9CTE8Io8aZy_ghK3eAe5coI59dylW7?usp=drive_link)](https://www.notion.so/DropShield-2eb917091520494da6b309ad98008b7b?pvs=21)
+[[DropShield 프로젝트 데이터셋](https://drive.google.com/drive/folders/1Bk9CTE8Io8aZy_ghK3eAe5coI59dylW7?usp=drive_link)]
 
 이 폴더에는 다음과 같은 내용이 포함되어 있습니다:
 
