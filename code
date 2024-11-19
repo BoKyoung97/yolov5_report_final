@@ -1,0 +1,5 @@
+# prompt: 구글 드라이브랑 연결
+
+from google.colab import drive
+drive.mount('/content/drive')
+
