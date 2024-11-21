@@ -83,28 +83,28 @@ format1:    # darknet yolo (predefined format]
   name: "darknet yolo"           # if not specified, "[fmt%d] $data_fmt" is used as default format name
 ```
 
-DarkLabel 프로그램에 darknet yolo라는 classes가 추가 되었고 밑에 한 개의 ‘cup’ class가 추가된 것을 확인할 수 있다.
+It can be seen that a class called darknet yolo has been added to the DarkLabel program and one 'cup' class has been added at the bottom.
 
-1. DarkLabel에서  image를 불러와서 해당 class에 부합하는 물체를 라벨링 한다.
+1. Import the image from DarkLabel and label the object that matches the class.
 
-DarkLabel에서 Open Image Folder를 통해 images 폴더를 선택하여 변환된 이미지를 불러왔다. Box + Label로 선택 후 아래 사진과 같이 해당 class에 부합하는 물체에 Annotation을 했다. Annotation이 끝난 후 GT Save As를 통해 cup이라는 폴더를 만들고 해당 폴더 안에 저장 했다.
+From DarkLabel, the images folder was selected through the Open Image Folder to import the converted image. After selecting Box + Label, an announcement was made on the object that matches the class as shown in the picture below. After the announcement was completed, a folder called cup was created through GT Save As and stored in the folder.
 
 ![스크린샷 2024-11-15 004325](https://github.com/user-attachments/assets/369fcbd1-fbac-4c36-a41a-4f386eecca52)
 
-1. cup 폴더 안에 라벨링 된 txt파일이 있음을 확인할 수 있다. 
+2. You can see that there is a labeled txt file in the cup folder.
 
 ![스크린샷 2024-11-15 004713](https://github.com/user-attachments/assets/9b0f07d2-ec79-456c-b469-68ddc7ee7f57)
 
 ### dataset_DropShield
 
-구글 드라이브에 학습 데이터셋과 관련 파일들을 업로드하였습니다. 
+Uploading the learning data reset to Google drive.
 
 [[DropShield 프로젝트 데이터셋](https://drive.google.com/drive/folders/1Bk9CTE8Io8aZy_ghK3eAe5coI59dylW7?usp=drive_link)]
 
-이 폴더에는 다음과 같은 내용이 포함되어 있습니다:
+This folder contains the following:
 
-- 학습용 이미지 파일 cup_000
-- 라벨링 된 데이터 cup
+- Image file 'cup_000' for learning
+- Labeled data 'cup'
 
 ---
 
