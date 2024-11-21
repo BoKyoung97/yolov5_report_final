@@ -180,11 +180,6 @@ Create_npy('/content/drive/MyDrive/yolov5/Train/images', 512, 'jpg')
 !python train.py  --img 512 --batch 16 --epochs 300 --data /content/drive/MyDrive/yolov5/data.yaml --weights yolov5n.pt --cache
 ```
 
-- Using the 'train.py ' script, we train the YOLOv5 model.
-- The input image size is set to 512 through the '--img 512' option, and the batch size is set to '--batch 16' to proceed with model learning.
-- A total of 300 learning epochs were set with '--epochs 300', and the dataset path was designated through the '--data' option.
-- Initial model weights are set using pre-trained 'yolov5n.pt ' weights.
-
 <aside>
 💡
 
