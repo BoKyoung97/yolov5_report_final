@@ -131,15 +131,9 @@ drive.mount('/content/drive')
 !pip install Pillow==10.3
 ```
 
-`!git clone` 명령어로 YOLOv5 리포지토리를 클론
-
-`%pip install -qr requirements.txt`를 통해 YOLOv5 실행에 필요한 라이브러리들을 자동 설치
-
-`Pillow==10.3` 버전을 설치하여 이미지 처리에 필요한 기능을 제공
-
 ### Image File Management
 
-1. 먼저, YOLOv5 모델 학습을 위한 데이터 폴더 구조를 생성한다.
+1. 
 
 ```
 !mkdir -p Train/labels
@@ -148,48 +142,48 @@ drive.mount('/content/drive')
 !mkdir -p Val/images
 ```
 
-`Train` 폴더 → 학습용 이미지와 레이블 파일을 저장하는 디렉토리
+'Train' folder → directory that stores learning images and label files
 
-`Val` 폴더 → 검증용 이미지와 레이블 파일을 저장하는 디렉토리
+'Val' folder → directory that stores images and label files for verification
 
-1. 각각의 하위 폴더에 이미지와 해당 레이블 데이터를 구분하여 업로드 한다.
+2. Upload the image and the corresponding label data separately to each subfolder.
 
 ![스크린샷 2024-11-15 011608](https://github.com/user-attachments/assets/63cf7556-313a-44ac-ba83-e0e8e808867f)
 
-1. yolov5 폴더에 가이드와 함께 제공된 **yolov5n.pt** 파일과 라벨링한 class의 이름에 맞게 수정한 **data.yaml** 파일을 업로드 한다.
+3. Upload the **yolov5n.pt** file that came with the guide to the yolov5 folder and the **data.yaml** file that you modified to match the name of the class you labeled.
 
-### yolov5 모델 학습
+### Learning yolov5 models
 
-1. 이미지 전처리 및 데이터셋 생성
+1. Pre-processing images and creating datasets
 - `torch`, `os`, `IPython.display`, `numpy`, `tensorflow`, `PIL` …
     
-    다양한 라이브러리를 불러와서 이미지 처리, 데이터셋 관리, 출력 등을 수행한다. 
+    Various libraries are imported to perform image processing, dataset management, and output. 
     
 - `_preproc()`
     
-    이미지를 리사이즈 하고 중앙에서 크롭하여 모델 입력에 맞는 크기로 변환한다.
+    Resize the image and crop centrally to convert it to a size suitable for model input.
     
 - `Create_npy()`
     
-    지정된 디렉토리에서 이미지를 불러와 전처리 후 `npy` 파일 형식으로 저장한다.
+    The image is retrieved from the designated directory, preprocessed, and saved in the form of a 'npy' file.
     
 
-1. 모델 학습에 필요한 이미지 데이터 준비
-
+2. Prepare image data for model training
+   
 ```jsx
 Create_npy('/content/drive/MyDrive/yolov5/Train/images', 512, 'jpg')
 ```
 
-1. 모델 학습
+3. Model Learning
 
 ```jsx
 !python train.py  --img 512 --batch 16 --epochs 300 --data /content/drive/MyDrive/yolov5/data.yaml --weights yolov5n.pt --cache
 ```
 
-- `train.py` 스크립트를 사용하여 YOLOv5 모델을 학습시킨다.
-- `--img 512` 옵션을 통해 입력 이미지 크기를 512로 설정하고, `--batch 16`으로 배치 크기를 설정하여 모델 학습을 진행한다.
-- `--epochs 300`으로 총 300번의 학습 epoch을 설정하고, `--data` 옵션을 통해 데이터셋 경로를 지정했다.
-- 사전 훈련된 `yolov5n.pt` 가중치를 사용하여 초기 모델 가중치를 설정한다.
+- Using the 'train.py ' script, we train the YOLOv5 model.
+- The input image size is set to 512 through the '--img 512' option, and the batch size is set to '--batch 16' to proceed with model learning.
+- A total of 300 learning epochs were set with '--epochs 300', and the dataset path was designated through the '--data' option.
+- Initial model weights are set using pre-trained 'yolov5n.pt ' weights.
 
 <aside>
 💡
