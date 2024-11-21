@@ -108,20 +108,19 @@ This folder contains the following:
 
 ---
 
-## Nvidia Jetson Nano 학습 과정:
+## Nvidia Jetson Nano Learning Course:
 
-### 구글 드라이브 연동
+### Google Drive Interworking
 
-`drive.mount('/content/drive')` 명령어를 통해 구글 드라이브를 Colab 환경에 마운트하여, 드라이브 내의 파일에 접근하고 사용할 수 있도록 설정한다.
+`drive.mount('/content/drive')` The command mounts the Google drive into the Colab environment to access and use files within the drive.
 
 ```jsx
 from google.colab import drive
 drive.mount('/content/drive')
 ```
 
-### yolov5 설치
+### install yolov5
 
-다음은 YOLOv5 모델을 GitHub에서 클론하고, 필요한 라이브러리를 설치하는 과정이다.
 
 ```jsx
 #clone YOLOv5 and
@@ -138,7 +137,7 @@ drive.mount('/content/drive')
 
 `Pillow==10.3` 버전을 설치하여 이미지 처리에 필요한 기능을 제공
 
-### 이미지 파일 관리
+### Image File Management
 
 1. 먼저, YOLOv5 모델 학습을 위한 데이터 폴더 구조를 생성한다.
 
