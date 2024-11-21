@@ -180,20 +180,21 @@ Create_npy('/content/drive/MyDrive/yolov5/Train/images', 512, 'jpg')
 !python train.py  --img 512 --batch 16 --epochs 300 --data /content/drive/MyDrive/yolov5/data.yaml --weights yolov5n.pt --cache
 ```
 
+
 <aside>
 💡
 
-**yolov5 모델 학습 완료**
+**Complete yolov5 model training**
 
 </aside>
 
 ![스크린샷 2024-11-15 013046](https://github.com/user-attachments/assets/74813eb8-11e3-4600-af32-f0674feb6460)
 
- yolov5 폴더 안 runs/train/exp에 물체가 학습된 걸 확인할 수 있다.
+You can see that the object has been learned in runs/train/exp in the yolov5 folder.
 
-### yolov5 모델 학습 결과 검증
+### validation of yolov5 model training results
 
-학습 결과는 다음과 같다.
+The learning outcomes are as follows.
 
 https://drive.google.com/drive/folders/1fdNvyTpTAPEKfL-fzqJbzyR3yTY0g1Fl?usp=sharing
 
@@ -233,28 +234,27 @@ https://drive.google.com/drive/folders/1fdNvyTpTAPEKfL-fzqJbzyR3yTY0g1Fl?usp=sha
 
 ![val_batch0_labels](https://github.com/user-attachments/assets/7d7dbb82-3068-4497-a452-3787846fe8a1)
 
-### **학습 결과 확인**
+### **Check learning outcomes**
 
-학습 후 학습 결과를 확인하기 위한 작업이 필요하다. exp파일 안에 weights 파일이 있다.
+After learning, work is needed to check the learning results. There are weights files in the exp file.
 
-그 중 `best.pt` 를 활용하여 `detect.py`를 진행해 학습 결과를 확인한다.
+Among them, 'best.pt ' is used to check the learning results by conducting 'detect.py '.
 
 ```jsx
 !python detect.py --weights runs/train/exp/weights/best.pt --img 512 --conf 0.1 --source /content/drive/MyDrive/yolov5/Train/images
 ```
 
-- **`-weights`**: 훈련된 모델 가중치 파일(`best.pt`)을 사용.
-- **`-img 512`**: 입력 이미지 크기를 512x512로 설정.
-- **`-conf 0.1`**: 감지된 객체의 신뢰도 임계값을 0.1로 설정.
-- **`-source`**: 감지할 이미지가 있는 폴더 경로를 지정 (`/content/drive/MyDrive/yolov5/Train/images`)
+- **`-weights`**: Using a trained model weight file ('best.pt `).
+- **`-img 512`**: Set input image size to 512x512.
+- **`-conf 0.1`**: Set the reliability threshold for detected objects to 0.1.
+- **`-source`**: Specify the folder path with images to be detected (`/content/drive/MyDrive/yolov5/Train/images`)
 
-### **detect.py 실행 이미지 (detect.py execution image):**
+### **detect.py execution image:**
 
 ![스크린샷 2024-11-15 024009](https://github.com/user-attachments/assets/bd88c470-d618-4521-9191-e93b49e06d15)
 
-감지 결과는 `runs/detect/exp2` 폴더에 저장 된 것을 확인 할 수 있다.
 
-### **detect.py를 통한 학습 결과 (Learning outcomes with detect.py):**
+### **Learning outcomes with detect.py:**
 
 ![val_batch0_pred](https://github.com/user-attachments/assets/27ce7ab3-fb1d-4771-a9e1-414f24d51ae8)
 
@@ -264,7 +264,7 @@ https://drive.google.com/drive/folders/1fdNvyTpTAPEKfL-fzqJbzyR3yTY0g1Fl?usp=sha
 
 ![val_batch1_pred](https://github.com/user-attachments/assets/2bc3d954-8b53-44ba-9770-4f41af9bf183)
 
-### **detect.py 실행 영상**
+### **detect.py Run Video**
 
 ```jsx
 !pip install ultralytics
