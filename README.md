@@ -37,35 +37,35 @@ For this project, we are investigating relevant technologies and the latest rese
 
 ---
 
-## **영상 취득 방법 (Image Acquisition Method):**
+## **Image Acquisition Method:**
 
-이 프로젝트에서는 물체의 추락 위험을 감지하기 위해, 집에서 직접 물체를 다양한 방향으로 이동시키며 영상을 취득하였다. 물체는 탁자, 책상 등의 가구 위에 놓인 상태에서 추락 위험이 있는 위치로 이동시켜, 추락 사고를 유발할 수 있는 다양한 상황을 재현하였다.
+In this project, to detect the risk of object falls, videos were captured by manually moving objects in various directions at home. The objects were placed on furniture such as tables and desks and moved to positions where there was a risk of falling, simulating various scenarios that could potentially lead to fall accidents.
 
-### 실제 환경에서의 물체 추락 위험 영상
+### Videos of object fall risks in real-world environments
 
 https://youtube.com/shorts/nn1UpF9YRS8?feature=share
 
 ---
 
-## 학습 데이터 추출과 학습 어노테이션 (**Learning Data Extraction and Learning Annotation)**:
+## **Learning Data Extraction and Learning Annotation**:
 
-### 비디오 해상 조정 (Video resolution adjustment)
+### Video resolution adjustment
 
-YOLOv5에서 640 해상도 이미지로 학습하기 위해서 영상을 640 x 640 해상도 영상으로 만들었다.  
+The video was converted into 640 x 640 resolution frames to train the YOLOv5 model with 640 resolution images.
 
 https://online-video-cutter.com/ko/resize-video
 
 ### DarkLabel
 
-640 x 640 해상도로 만들어진 영상을 프레임 단위로 이미지로 만들거나 어노테이션을 하기 위해서 Video/Image Labeling and Annotation Tool로 잘 알려진 DarkLabel을 사용했다.
+To create frames from the video at 640 x 640 resolution or to perform annotation, DarkLabel, a well-known Video/Image Labeling and Annotation Tool, was used.
 
-- **데이터 추출**: 수집한 영상을 **DarkLabel** 에서 이미지로 추출합니다.
+- **data extraction**: The collected video is extracted into images using **DarkLabel**.
 
 https://drive.google.com/drive/folders/1BdAVD2W8ULQyGreOrrF9u8lwIlxFq0LN?usp=drive_link
 
 ![image](https://github.com/user-attachments/assets/c3c9f044-fa2b-4089-9d81-a2a8b19cf3ab)
 
-1. 먼저 Annotation을 하기 전에 darklabel.yml을 통해 classes를 추가한다.
+1. 
 
 ```jsx
 my_classes1: ["lane", "vehicle", "bicycle", "motorbike", "animal", "tree", "building"]
