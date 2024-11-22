@@ -274,7 +274,7 @@ Among them, 'best.pt ' is used to check the learning results by conducting 'dete
 
 ![스크린샷 2024-11-15 122412](https://github.com/user-attachments/assets/5562a70b-6e8f-464f-af4c-5b4567e94be0)
 
-https://drive.google.com/file/d/1AJfGVJsACPwdp-21n7DZGr26RRpjmALu/view?usp=sharing
+https://drive.google.com/file/d/12riSagKj8m45ltUJ_n06RnX_Ztiv-tEw/view?usp=sharing
 
 https://drive.google.com/file/d/1AJfGVJsACPwdp-21n7DZGr26RRpjmALu/view?usp=sharing
 
