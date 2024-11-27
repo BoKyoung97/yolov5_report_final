@@ -279,3 +279,8 @@ https://drive.google.com/file/d/12riSagKj8m45ltUJ_n06RnX_Ztiv-tEw/view?usp=shari
 https://drive.google.com/file/d/1AJfGVJsACPwdp-21n7DZGr26RRpjmALu/view?usp=sharing
 
 ![스크린샷 2024-11-15 030047](https://github.com/user-attachments/assets/ffada41f-ab9d-456c-9a05-d34ed9394c66)
+
+https://drive.google.com/file/d/1l77Gaif_49es07NCU1MwsPv3WCu2d74R/view?usp=sharing
+
+https://drive.google.com/file/d/1_OJLSlrR0P_Q259bIxGNUkpcZqM9KEIV/view?usp=sharing
+
